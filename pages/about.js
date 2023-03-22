@@ -24,7 +24,7 @@ export default AboutPage
 
 export const getStaticProps = async () => {
     const { data, query, variables } = await client.queries.page({
-        relativePath: "about.md",
+        relativePath: "about.json",
     });
 
     return {

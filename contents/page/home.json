@@ -1,0 +1,14 @@
+{
+  "title": "Home",
+  "description": "home page",
+  "sections": [
+    {
+      "title": "Haloooo marketing",
+      "background": "rgb(184, 66, 66)",
+      "_template": "marketing"
+    },
+    {
+      "_template": "benefit"
+    }
+  ]
+}
