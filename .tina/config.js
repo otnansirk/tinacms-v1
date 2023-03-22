@@ -7,17 +7,18 @@ const schema = defineSchema({
             name: "page",
             path: "contents/page",
             format: "md",
-            ui: {
-                router: ({ document }) => {
-                    if (document._sys.filename === 'home') {
-                        return `/`
-                    }
-                    if (document._sys.filename === 'about') {
-                        return `/about`
-                    }
-                    return undefined
-                },
-            },
+            // use this /~/about to edit about page
+            // ui: {
+                // router: ({ document }) => {
+                    // if (document._sys.filename === 'home') {
+                    //     return `/`
+                    // }
+                    // if (document._sys.filename === 'about') {
+                    //     return `/about`
+                    // }
+                    // return undefined
+                // },
+            // },
             fields: [
                 {
                     label: "Title",
@@ -46,10 +47,17 @@ const schema = defineSchema({
                     name: 'sections',
                     type: "object",
                     list: true,
+                    ui: {
+                        visualSelector: true
+                    },
                     templates: [
                         {
                             name: 'benefit',
                             label: 'Benefit',
+                            ui: {
+                                category:'Sections',
+                                previewSrc: 'https://tinyjpg.com/images/social/website.jpg'
+                            },
                             fields: [
                                 {
                                     label: "Title",
@@ -61,6 +69,11 @@ const schema = defineSchema({
                         {
                             name: 'marketing',
                             label: 'Marketing',
+                            category:'Sections',
+                            ui: {
+                                category:'Sections',
+                                previewSrc: 'https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg'
+                            },
                             fields: [
                                 {
                                     label: "Title",
