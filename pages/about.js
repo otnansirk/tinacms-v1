@@ -11,9 +11,9 @@ function AboutPage(props) {
         data      : props.data,
     })
 
-
+    // data-tinafield only experimental not use in production
     return <div>
-        <h1>{loading ? 'Loading...' : data.page.title}</h1>
+        <h1 data-tinafield="title">{loading ? 'Loading...' : data.page.title}</h1>
         <DynamicComponent sections={data.page?.sections}/>
     </div>
 
