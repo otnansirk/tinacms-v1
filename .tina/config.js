@@ -6,7 +6,7 @@ const schema = defineSchema({
             label: "Pages",
             name: "page",
             path: "contents/page",
-            format: "md",
+            format: "json",
             // use this /~/about to edit about page
             // ui: {
             // router: ({ document }) => {
