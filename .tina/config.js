@@ -9,15 +9,15 @@ const schema = defineSchema({
             format: "md",
             // use this /~/about to edit about page
             // ui: {
-                // router: ({ document }) => {
-                    // if (document._sys.filename === 'home') {
-                    //     return `/`
-                    // }
-                    // if (document._sys.filename === 'about') {
-                    //     return `/about`
-                    // }
-                    // return undefined
-                // },
+            // router: ({ document }) => {
+            // if (document._sys.filename === 'home') {
+            //     return `/`
+            // }
+            // if (document._sys.filename === 'about') {
+            //     return `/about`
+            // }
+            // return undefined
+            // },
             // },
             fields: [
                 {
@@ -55,7 +55,7 @@ const schema = defineSchema({
                             name: 'benefit',
                             label: 'Benefit',
                             ui: {
-                                category:'Sections',
+                                category: 'Sections',
                                 previewSrc: 'https://tinyjpg.com/images/social/website.jpg'
                             },
                             fields: [
@@ -69,9 +69,9 @@ const schema = defineSchema({
                         {
                             name: 'marketing',
                             label: 'Marketing',
-                            category:'Sections',
+                            category: 'Sections',
                             ui: {
-                                category:'Sections',
+                                category: 'Sections',
                                 previewSrc: 'https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg'
                             },
                             fields: [
@@ -79,6 +79,16 @@ const schema = defineSchema({
                                     label: "Title",
                                     name: "title",
                                     type: "string"
+                                },
+                                {
+                                    label: "Background",
+                                    name: "background",
+                                    type: "string",
+                                    description: "My custom background field",
+                                    ui: {
+                                        component: 'color',
+                                        colorFormat: 'rgb'
+                                    }
                                 }
                             ],
                         },
