@@ -1,6 +1,7 @@
 
 import { useTina } from "tinacms/dist/react";
 import { client } from "../.tina/__generated__/client";
+// import Uploader from "../components/core/uploader/Uploader.jsx";
 import DynamicComponent from "../components/DynamicComponent";
 
 function HomePage(props) {
@@ -13,6 +14,7 @@ const { data, loading } = useTina({
     return <div>
         <h1>{loading ? 'Loading...' : data.page.title}</h1>
         <DynamicComponent sections={data.page?.sections}/>
+        {/* <Uploader/> */}
     </div>
 }
 
