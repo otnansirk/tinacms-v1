@@ -5,3 +5,7 @@
 
 ### Edit mode
 access to http://localhost:3000/admin
+
+### Playground
+1. [Blocks - Object list template](https://tina-gql-playground.vercel.app/object-list-templates)
+    - allows to create blocks with control drag to reorder
