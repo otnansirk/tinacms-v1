@@ -1,7 +1,7 @@
 
 import { useTina } from "tinacms/dist/react";
 import { client } from "../.tina/__generated__/client";
-import DynamicComponent from "../components/DynamicComponent.js";
+import DynamicComponent from "../components/DynamicComponent";
 
 function HomePage(props) {
 const { data, loading } = useTina({

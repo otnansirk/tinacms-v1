@@ -1,4 +1,5 @@
-import { defineSchema, defineConfig } from 'tinacms'
+// import * as React from 'react';
+import { defineSchema, defineConfig, wrapFieldsWithMeta } from 'tinacms'
 
 const schema = defineSchema({
     collections: [
@@ -89,6 +90,20 @@ const schema = defineSchema({
                                         component: 'color',
                                         colorFormat: 'rgb'
                                     }
+                                },
+                                {
+                                    label: "Custom",
+                                    name: "custom",
+                                    type: "string",
+                                    ui : {
+                                        component: wrapFieldsWithMeta(({input}) => {
+                                            return (
+                                                <div>
+                                                    <input></input>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 }
                             ],
                         },
@@ -115,6 +130,9 @@ export const HeaderBlock = {
 }
 
 const config = defineConfig({
+    token: process.env.NEXT_TINA_TOKEN,
+    clientId: process.env.NEXT_TINA_ID,
+    branch: process.env.NEXT_TINA_BRANCH,
     build: {
         publicFolder: "public", // The public asset folder for your framework
         outputFolder: "admin", // within the public folder
