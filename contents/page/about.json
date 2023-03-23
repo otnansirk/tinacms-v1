@@ -1,4 +1,11 @@
 {
   "title": "about",
-  "description": "about"
+  "description": "about",
+  "sections": [
+    {
+      "title": "This is marketing",
+      "background": "rgb(194, 52, 191)",
+      "_template": "marketing"
+    }
+  ]
 }
