@@ -1,4 +1,4 @@
-import Uppy, { debugLogger } from "@uppy/core";
+import Uppy from "@uppy/core";
 import Dashboard from "@uppy/dashboard";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
@@ -10,7 +10,7 @@ function Uploader() {
 
   useEffect(() => {
     if (uppyRef.current) {
-      new Uppy({ logger: debugLogger }).use(Dashboard, {
+      new Uppy().use(Dashboard, {
         inline: true,
         target: uppyRef.current,
         showProgressDetails: true,

@@ -1,10 +1,9 @@
-import React from 'react';
 import { defineSchema, defineConfig, wrapFieldsWithMeta } from 'tinacms'
 
 const schema = defineSchema({
     admin: {
         auth: {
-            useLocalAuth: false
+            useLocalAuth: true
         }
     },
     collections: [
@@ -61,7 +60,6 @@ const schema = defineSchema({
                             name: 'benefit',
                             label: 'Benefit',
                             ui: {
-                                category: 'Sections',
                                 previewSrc: 'https://tinyjpg.com/images/social/website.jpg'
                             },
                             fields: [
@@ -77,7 +75,6 @@ const schema = defineSchema({
                             label: 'Marketing',
                             category: 'Sections',
                             ui: {
-                                category: 'Sections',
                                 previewSrc: 'https://kinsta.com/wp-content/uploads/2020/08/tiger-jpg.jpg'
                             },
                             fields: [
@@ -93,7 +90,6 @@ const schema = defineSchema({
                                     description: "My custom background field",
                                     ui: {
                                         component: 'color',
-                                        colorFormat: 'rgb'
                                     }
                                 },
                                 {
@@ -101,7 +97,7 @@ const schema = defineSchema({
                                     name: "custom",
                                     type: "string",
                                     ui : {
-                                        component: wrapFieldsWithMeta(({input}) => {
+                                        component: wrapFieldsWithMeta(({form, input}) => {
                                             return (
                                                 <div>
                                                     <input className='shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md'></input>

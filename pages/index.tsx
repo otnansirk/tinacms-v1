@@ -1,20 +1,17 @@
-
 import { useTina } from "tinacms/dist/react";
 import { client } from "../.tina/__generated__/client";
-// import Uploader from "../components/core/uploader/Uploader.jsx";
-import DynamicComponent from "../components/DynamicComponent";
+import Blocks from "../components/blocks-renderer";
 
 function HomePage(props) {
-const { data, loading } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-})
+    const { data } = useTina({
+        query: props.query,
+        variables: props.variables,
+        data: props.data,
+    })
 
     return <div>
-        <h1>{loading ? 'Loading...' : data.page.title}</h1>
-        <DynamicComponent sections={data.page?.sections}/>
-        {/* <Uploader/> */}
+        <h1>{data?.page?.title}</h1>
+        <Blocks sections={data.page?.sections}/>
     </div>
 }
 

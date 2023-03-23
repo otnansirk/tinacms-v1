@@ -1,7 +1,7 @@
 
 import { useTina } from "tinacms/dist/react";
 import { client } from "../.tina/__generated__/client";
-import DynamicComponent from "../components/DynamicComponent";
+import DynamicComponent from "../components/blocks-renderer";
 
 
 function AboutPage(props) {

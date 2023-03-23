@@ -6,7 +6,7 @@ const sectionBlock = {
     PageSectionsMarketing
 }
 
-function DynamicComponent(props) {
+function Blocks(props) {
     const { sections }  = props;
     if (!sections) {
         return <></>;
@@ -20,4 +20,4 @@ function DynamicComponent(props) {
     return blocks;
 }
 
-export default DynamicComponent;
+export default Blocks;
