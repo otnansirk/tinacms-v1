@@ -5,7 +5,7 @@
 
 `Requires authentication with tina cloud for edit mode`
 
-## Development
+# Development
 access to http://localhost:3000
 ### Edit mode
 access to http://localhost:3000/admin
@@ -13,7 +13,7 @@ access to http://localhost:3000/admin
 [Home Page] access to http://localhost:3000/admin/#/~/ <br>
 [About Page] access to http://localhost:3000/admin/#/~/about
 
-## Production
+# Production
 access to https://tinav1.netlify.app
 ### Edit mode
 access to https://tinav1.netlify.app/admin
