@@ -5,7 +5,7 @@ import DynamicComponent from "../components/blocks-renderer";
 
 
 function AboutPage(props) {
-    const { data, loading } = useTina({
+    const { data } = useTina({
         query     : props.query,
         variables : props.variables,
         data      : props.data,
@@ -13,7 +13,7 @@ function AboutPage(props) {
 
     // data-tinafield only experimental not use in production
     return <div>
-        <h1 data-tinafield="title">{loading ? 'Loading...' : data.page.title}</h1>
+        <h1 data-tinafield="title">{data.page?.title}</h1>
         <DynamicComponent sections={data.page?.sections}/>
     </div>
 
