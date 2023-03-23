@@ -1,4 +1,4 @@
-// import * as React from 'react';
+import React from 'react';
 import { defineSchema, defineConfig, wrapFieldsWithMeta } from 'tinacms'
 
 const schema = defineSchema({
@@ -92,14 +92,14 @@ const schema = defineSchema({
                                     }
                                 },
                                 {
-                                    label: "Custom",
+                                    label: "Custom Input",
                                     name: "custom",
                                     type: "string",
                                     ui : {
                                         component: wrapFieldsWithMeta(({input}) => {
                                             return (
                                                 <div>
-                                                    <input></input>
+                                                    <input className='shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md'></input>
                                                 </div>
                                             )
                                         })
