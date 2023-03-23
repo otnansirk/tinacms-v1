@@ -2,6 +2,11 @@ import React from 'react';
 import { defineSchema, defineConfig, wrapFieldsWithMeta } from 'tinacms'
 
 const schema = defineSchema({
+    admin: {
+        auth: {
+            useLocalAuth: false
+        }
+    },
     collections: [
         {
             label: "Pages",
