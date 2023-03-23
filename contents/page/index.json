@@ -1,0 +1,9 @@
+{
+  "title": "Index don't delete it",
+  "description": "This for index",
+  "sections": [
+    {
+      "_template": "benefit"
+    }
+  ]
+}
