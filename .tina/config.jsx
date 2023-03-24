@@ -87,6 +87,12 @@ const schema = defineSchema({
                                     }
                                 },
                                 {
+                                    label: "Image",
+                                    name: "image",
+                                    type: "image",
+                                    description: "Image selected"
+                                },
+                                {
                                     label: "Custom Input",
                                     name: "custom",
                                     type: "string",
@@ -179,7 +185,23 @@ const schema = defineSchema({
                     ]
                 }
             ]
-        }
+        },
+        // {
+        //     label: "Media Manager",
+        //     name: "mediaManager",
+        //     path: "contents/media",
+        //     format: "json",
+        //     ui: {
+        //         global: true,
+        //     },
+        //     fields: [
+        //         {
+        //             label: "Title",
+        //             name: "title",
+        //             type: "string"
+        //         }
+        //     ]
+        // }
     ]
 })
 
