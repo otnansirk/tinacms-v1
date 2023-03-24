@@ -1,0 +1,16 @@
+{
+  "header": {
+    "menu": [
+      {
+        "label": "About",
+        "url": "asasasasasasasas",
+        "_template": "links"
+      },
+      {
+        "label": "Home",
+        "url": "url",
+        "_template": "links"
+      }
+    ]
+  }
+}
