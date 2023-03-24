@@ -90,8 +90,8 @@ const schema = defineSchema({
                                     label: "Custom Input",
                                     name: "custom",
                                     type: "string",
-                                    ui : {
-                                        component: wrapFieldsWithMeta(({form, input}) => {
+                                    ui: {
+                                        component: wrapFieldsWithMeta(({ form, input }) => {
                                             return (
                                                 <div>
                                                     <input className='shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md'></input>
@@ -100,6 +100,80 @@ const schema = defineSchema({
                                         })
                                     }
                                 }
+                            ],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            label: "Global",
+            name: "global",
+            path: "contents/global",
+            format: "json",
+            ui: {
+                global: true,
+            },
+            fields: [
+                {
+                    type: "object",
+                    label: "Header",
+                    name: "header",
+                    fields: [
+                        {
+                            type: "object",
+                            label: "Menu",
+                            name: "menu",
+                            list: true,
+                            templates: [
+                                {
+                                    type: "string",
+                                    name: "links",
+                                    label: "Links",
+                                    ui : {
+                                        itemProps: (item) => ({
+                                            label: item?.label
+                                        })
+                                    },
+                                    fields: [
+                                        {
+                                            type: "string",
+                                            name: "label",
+                                            label: "Label",
+                                        },
+                                        {
+                                            type: "string",
+                                            name: "url",
+                                            label: "URL",
+                                        }
+                                    ]
+                                }
+                            ],
+                        },
+                    ],
+                },
+                {
+                    type: "object",
+                    label: "Themes",
+                    name: "themes",
+                    fields: [
+                        {
+                            type: "string",
+                            name: "theme",
+                            label: "Theme",
+                            options: [
+                                {
+                                    label: "default",
+                                    value: "Default",
+                                },
+                                {
+                                    label: "Business",
+                                    value: "business",
+                                },
+                                {
+                                    label: "Sport",
+                                    value: "sport",
+                                },
                             ],
                         },
                     ]
@@ -132,7 +206,19 @@ const config = defineConfig({
         publicFolder: "public", // The public asset folder for your framework
         outputFolder: "admin", // within the public folder
     },
-    schema
+    schema,
+    media: {
+        // If you wanted cloudinary do this
+        // loadCustomStore: async () => {
+        //   const pack = await import("next-tinacms-cloudinary");
+        //   return pack.TinaCloudCloudinaryMediaStore;
+        // },
+        // this is the config for the tina cloud media store
+        tina: {
+            publicFolder: "public",
+            mediaRoot: "uploads",
+        },
+    }
 })
 
 
