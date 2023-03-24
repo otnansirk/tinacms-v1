@@ -1,7 +1,7 @@
 import { useTina } from "tinacms/dist/react";
-// import { client } from "../.tina/__generated__/client";
 import Blocks from "../components/blocks-renderer";
-import { dbConnection } from "../lib/databaseConnection";
+import { client } from "../.tina/__generated__/client";
+// import { dbConnection } from "../lib/databaseConnection";
 
 function RootPage(props) {
     const { data } = useTina({
@@ -20,7 +20,7 @@ export default RootPage
 
 
 export const getStaticProps = async ({ params }) => {
-    const { data, query, variables } = await dbConnection.queries.page({
+    const { data, query, variables } = await client.queries.page({
         relativePath: `${params.slugify}.json`,
     });
 
@@ -34,7 +34,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
-    const pagesListData = await dbConnection.queries.pageConnection();
+    const pagesListData = await client.queries.pageConnection();
 
     return {
         paths: pagesListData.data.pageConnection.edges.map((page) => {

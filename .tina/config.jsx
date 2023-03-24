@@ -1,3 +1,4 @@
+import React from 'react';
 import { defineSchema, defineConfig, wrapFieldsWithMeta } from 'tinacms'
 
 const schema = defineSchema({
@@ -12,18 +13,11 @@ const schema = defineSchema({
             name: "page",
             path: "contents/page",
             format: "json",
-            // use this /~/about to edit about page
-            // ui: {
-            // router: ({ document }) => {
-            // if (document._sys.filename === 'home') {
-            //     return `/`
-            // }
-            // if (document._sys.filename === 'about') {
-            //     return `/about`
-            // }
-            // return undefined
-            // },
-            // },
+            ui: {
+                router: ({ document }) => {
+                    return document._sys.filename
+                },
+            },
             fields: [
                 {
                     label: "Title",

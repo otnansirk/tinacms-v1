@@ -3,13 +3,13 @@
   "description": "home page",
   "sections": [
     {
-      "title": "Haloooo marketing",
-      "background": "rgb(184, 66, 66)",
-      "_template": "marketing"
-    },
-    {
       "title": "test",
       "_template": "benefit"
+    },
+    {
+      "title": "Haloooo marketing",
+      "background": "#232EFF",
+      "_template": "marketing"
     }
   ]
 }
