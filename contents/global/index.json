@@ -2,6 +2,11 @@
   "header": {
     "menu": [
       {
+        "label": "Learner",
+        "url": "Learner",
+        "_template": "links"
+      },
+      {
         "label": "About",
         "url": "asasasasasasasas",
         "_template": "links"

@@ -5,6 +5,7 @@
     {
       "title": "This is marketing",
       "background": "rgb(194, 52, 191)",
+      "image": "/uploads/Comingsoon.png",
       "_template": "marketing"
     }
   ]
