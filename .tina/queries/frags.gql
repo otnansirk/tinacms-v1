@@ -3,3 +3,9 @@ fragment LayoutQueryFragment on Query {
     ...GlobalParts
   }
 }
+
+fragment MediaQueryFragment on Query {
+  mediaManager(relativePath: "index.json") {
+    ...MediaManagerParts
+  }
+}

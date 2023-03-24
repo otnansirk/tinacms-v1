@@ -1,6 +1,7 @@
 
 query contentQuery($relativePath: String!) {
-  ...LayoutQueryFragment
+  ...LayoutQueryFragment,
+  ...MediaQueryFragment
   page(relativePath: $relativePath) {
     ...PageParts
   }
