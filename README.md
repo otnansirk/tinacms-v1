@@ -24,3 +24,7 @@ access to https://tinav1.netlify.app/admin
 ### Playground
 1. [Blocks - Object list template](https://tina-gql-playground.vercel.app/object-list-templates)
     - allows to create blocks with control drag to reorder
+
+### Reference
+ - [Blocks template](https://tina.io/docs/editing/blocks/)
+ - [Active field indicator (BETA)](https://tina.io/docs/editing/active-field-indicator/)
