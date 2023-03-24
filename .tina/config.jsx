@@ -186,22 +186,22 @@ const schema = defineSchema({
                 }
             ]
         },
-        // {
-        //     label: "Media Manager",
-        //     name: "mediaManager",
-        //     path: "contents/media",
-        //     format: "json",
-        //     ui: {
-        //         global: true,
-        //     },
-        //     fields: [
-        //         {
-        //             label: "Title",
-        //             name: "title",
-        //             type: "string"
-        //         }
-        //     ]
-        // }
+        {
+            label: "Media Manager",
+            name: "mediaManager",
+            path: "contents/media",
+            format: "json",
+            ui: {
+                global: true,
+            },
+            fields: [
+                {
+                    label: "Title",
+                    name: "title",
+                    type: "string"
+                }
+            ]
+        }
     ]
 })
 
