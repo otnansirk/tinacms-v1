@@ -187,7 +187,7 @@ const schema = defineSchema({
             ]
         },
         {
-            label: "Media Manager",
+            label: "Media Manager 2",
             name: "mediaManager",
             path: "contents/media",
             format: "json",
@@ -231,15 +231,15 @@ const config = defineConfig({
     schema,
     media: {
         // If you wanted cloudinary do this
-        // loadCustomStore: async () => {
-        //   const pack = await import("next-tinacms-cloudinary");
-        //   return pack.TinaCloudCloudinaryMediaStore;
-        // },
-        // this is the config for the tina cloud media store
-        tina: {
-            publicFolder: "public",
-            mediaRoot: "uploads",
+        loadCustomStore: async () => {
+            const pack = await import('../lib/uppy-media-manager');
+            return pack.UppyMediaManager;
         },
+        // this is the config for the tina cloud media store
+        // tina: {
+        //     publicFolder: "public",
+        //     mediaRoot: "uploads",
+        // },
     }
 })
 

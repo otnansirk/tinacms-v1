@@ -8,7 +8,6 @@ function RootPage(props) {
         variables: props.variables,
         data: props.data,
     })
-    console.log(data);
 
     return <div>
         <h1>{data?.page?.title}</h1>
